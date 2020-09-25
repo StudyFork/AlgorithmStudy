@@ -1,4 +1,4 @@
-package wordpattern
+import java.util.*
 
 class Solution {
     fun wordPattern(pattern: String, s: String): Boolean {
