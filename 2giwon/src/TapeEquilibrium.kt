@@ -1,4 +1,3 @@
-package timecomplexity
 
 import kotlin.math.abs
 import kotlin.math.min
