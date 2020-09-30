@@ -1,10 +1,8 @@
 fun sumXor(n: Long): Long {
-    val binaryString = n.toString(radix = 2)
-    val max = Math.pow(2.toDouble(), binaryString.length.toDouble()).toLong()
-    var result = 0L
-    for (i in 0..max - n) {
-        if (n xor i == n + i) result++
+    var (target, result) = n to 0L
+    while (target > 0) {
+        result += if (target.rem(2) == 0L) 1L else 0L
+        target /= 2
     }
-
-    return result
+    return Math.pow(2.0, result.toDouble()).toLong()
 }
