@@ -4,10 +4,8 @@ class Solution {
             if (index > numbers.lastIndex) {
                 return if (target == sum) 1 else 0
             }
-            val firstElement = numbers[index]
-            val plusSum = calculateSum(index + 1, target, sum + firstElement)
-            val minusSum = calculateSum(index + 1, target, sum - firstElement)
-            return plusSum + minusSum
+            return calculateSum(index + 1, target, sum + numbers[index]) + 
+                calculateSum(index + 1, target, sum - numbers[index])
         }
         return calculateSum(0, target, 0)
     }
