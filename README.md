@@ -18,9 +18,10 @@
 
 ## 문제 기준
 아래 사이트에서 임의로 한 문제를 선정하여 issue 에 등록합니다. (요청에 따라 추가될 수 있습니다.)
-- Codility
-- HackerRank
-- Leetcode
+- [Codility](https://app.codility.com/programmers/)
+- [HackerRank](https://www.hackerrank.com/)
+- [Programmers](https://programmers.co.kr/)
+- [Leetcode](https://leetcode.com/)
 
 ## 스터디 신청
 - 해당 브랜치를 fork 하신 후, 개인 디렉토리를 생성하시어 PR을 올립니다.
