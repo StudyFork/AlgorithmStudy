@@ -1,14 +1,14 @@
 class Solution {
     fun solution(numbers: IntArray, target: Int): Int {
-        fun calculateSum(numbers: List<Int>, target: Int, sum: Int): Int {
-            if (numbers.isEmpty()) {
+        fun calculateSum(index: Int, target: Int, sum: Int): Int {
+            if (index > numbers.lastIndex) {
                 return if (target == sum) 1 else 0
             }
-            val firstElement = numbers.first()
-            val plusSum = calculateSum(numbers.drop(1), target, sum + firstElement)
-            val minusSum = calculateSum(numbers.drop(1), target, sum - firstElement)
+            val firstElement = numbers[index]
+            val plusSum = calculateSum(index + 1, target, sum + firstElement)
+            val minusSum = calculateSum(index + 1, target, sum - firstElement)
             return plusSum + minusSum
         }
-        return calculateSum(numbers.toList(), target, 0)
+        return calculateSum(0, target, 0)
     }
 }
