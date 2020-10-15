@@ -9,9 +9,10 @@ class Solution {
                 return
             }
             for (i in idx..sortedCandidates.lastIndex) {
-                if (sum + sortedCandidates[i] > target) return
-                temp.add(sortedCandidates[i])
-                dfs(sum + temp.last(), i)
+                val pick = sortedCandidates[i]
+                if (sum + pick > target) return
+                temp.add(pick)
+                dfs(sum + pick, i)
                 temp.removeAt(temp.lastIndex)
             }
         }
