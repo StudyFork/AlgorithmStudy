@@ -13,8 +13,8 @@ class PascalsTriangleii {
             val upper = triangle[upperIndex]
 
             for (i in 0 until row + 1) {
-                val upperPrevNum = if (i - 1 >= 0) upper[i - 1] else 0
-                val upperNum = if (i <= upperIndex) upper[i] else 0
+                val upperPrevNum = upper.getOrNull(i - 1) ?: 0
+                val upperNum = upper.getOrNull(i) ?: 0
                 val num = upperPrevNum + upperNum
                 list.add(num)
             }
