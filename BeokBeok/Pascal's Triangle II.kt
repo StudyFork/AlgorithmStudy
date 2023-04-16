@@ -3,7 +3,7 @@ class Solution {
         return makeRow(mutableListOf(), 0, rowIndex)
     }
 
-    private fun makeRow(list: List<Int>, startIndex: Int, lastIndex: Int): List<Int> {
+    private tailrec fun makeRow(list: List<Int>, startIndex: Int, lastIndex: Int): List<Int> {
         if (startIndex > lastIndex) return list
 
         return when (startIndex) {
