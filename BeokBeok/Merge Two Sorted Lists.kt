@@ -8,7 +8,7 @@
  * }
  */
 class Solution {
-    fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
+    tailrec fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         return when {
             list1 == null -> list2
             list2 == null -> list1
